@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import EventCreate from './views/EventCreate.vue'
 import EventsList from './views/EventList.vue'
 import EventShow from './views/EventShow.vue'
+// import User from './views/User.vue'
 
 Vue.use(Router)
 
@@ -16,9 +17,10 @@ export default new Router({
       component: EventsList
     },
     {
-      path: '/event',
+      path: '/event/:id',
       name: 'event-show',
-      component: EventShow
+      component: EventShow,
+      props: true
     },
     {
       path: '/event/create',
